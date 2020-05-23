@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>1001704601</h1>
+            <h1>Thiagarajan, Tharoon</h1>
+            <br>
+
+            <h1>Amazon Web Services</h1>
+            <br>
+            <h1>Cloud Computing 6:00</h1>
+            <h1>2015</h1>
+            <br>
+            <br>
+            <p>Start Time:{{start_time}}</p>
+            <p>End Time:{{end_time}}</p>
+            <p>Elapsed Time:{{elapsed_time}}</p>
+            {{table}}
+            <center>
+
+
+
+      {#{% if table is not None %}#}
+          <table style="padding: 5px;text-align: left;width: 20%;border-collapse: collapse;">
+            <thead>
+                  <th> State </th>
+                  <th> Population </th>
+            </thead>
+
+            <tbody>
+              {% for value in table %}
+            <tr>
+                  <td> {{ value['state'] }} </td>
+                  <td> {{ value['year2015'] }} </td>
+            </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      {#{% else %}#}
+          {#<div>No data available</div>#}
+      {#{% endif %}#}
+        </center>
+        </div>
+    </body>
+    </html>
+    

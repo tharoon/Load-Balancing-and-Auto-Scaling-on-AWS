@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <h1>1001704601</h1>
+ <h1>Thiagarajan, Tharoon</h1>
+            <br>
+
+            <h1>Amazon Web Services</h1>
+            <br>
+            <br>
+
+<h1><p id="demo"></p></h1>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+<div class="container">
+
+  <h1><div id="counter"></div></h1>
+  <button onclick="reset()">Reset</button>
+  <script language="JavaScript">
+    let counter = document.getElementById('counter');
+    let count = -1
+
+    var count_event = setInterval(Counter, 300);
+
+    function reset() {
+      count = 0;
+    }
+
+    function Counter() {
+      count += 1;
+      counter.innerHTML = count.toString();
+    }
+  </script>
+
+    </div>
+
+
+    <div id="static_clock">
+               <h1> Request Counts <span id="counter_2"></span></h1>
+            </div>
+            <script>
+            	
+            	 $.get("http://tthiaga-env.eba-tcvdfb27.us-east-2.elasticbeanstalk.com/quiz6", function(data){
+                console.log(data);
+                $("#counter_2").text(data);
+            });
+
+            </script>
+  </body>
+</html>
+
+</body>
+</html>

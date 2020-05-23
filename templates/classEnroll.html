@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="static/styles.css" rel="stylesheet">
+
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>1001704601</h1>
+            <h1>Thiagarajan, Tharoon</h1>
+            <br>
+
+            <h1>Amazon Web Services</h1>
+            <br>
+            <br>
+            <h3>Successfully Registered!</h3>
+            <br>
+            <br>
+
+            {#{% if table is not None %}#}
+          <table style="padding: 5px;text-align: left;width: 50%;border: 1px solid black;border-collapse: collapse;">
+            <thead>
+                  <th> IdNum </th>
+                  <th> Fname </th>
+                  <th> Lname </th>
+                  <th> Age </th>
+                  <th> Credit </th>
+                  <th> NoOfClass </th>
+            </thead>
+
+            <tbody>
+              {% for value in table %}
+            <tr>
+                  <td> {{ value['IdNum'] }} </td>
+                  <td> {{ value['Fname'] }} </td>
+                  <td> {{ value['Lname'] }} </td>
+                  <td> {{ value['Age'] }} </td>
+                  <td> {{ value['Credit'] }} </td>
+                  <td> {{ value['NoOfClass'] }} </td>
+            </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      {#{% else %}#}
+          {#<div>No data available</div>#}
+      {#{% endif %}#}
+        </center>
+
+        </div>
+    </body>
+    </html>

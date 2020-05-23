@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="static/styles.css" rel="stylesheet">
+      <title>List of queries</title>
+
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>1001704601</h1>
+      <h1>Thiagarajan, Tharoon</h1>
+      <br>
+      <br>
+
+      <h1>Amazon Web Services</h1>
+      <br>
+      <br>
+
+      <br>
+        <p><h3>No. of rows: {{rowcount}}</h3></p>
+        <p><h3>Execution Time: {{ elapsed_time }}</h3></p>
+
+      <center>
+
+
+
+      {#{% if table is not None %}#}
+          <table style="padding: 5px;text-align: left;width: 20%;border: 1px solid black;border-collapse: collapse;">
+            <thead>
+                  <th> Time </th>
+                  <th> Latitude </th>
+                  <th> Longitude </th>
+                  <th> Depth </th>
+                  <th> Magnitude </th>
+                  <th> Magnitude Type </th>
+                  <th> NST </th>
+                  <th> Gap </th>
+                  <th> DMin </th>
+                  <th> RMS </th>
+                  <th> Net </th>
+                  <th> ID </th>
+                  <th> Updated </th>
+                  <th> Place </th>
+                  <th> Type </th>
+                  <th> Horizontal Error </th>
+                  <th> Depth Error </th>
+                  <th> Magnitude Error </th>
+                  <th> Magnitude NST </th>
+                  <th> Status </th>
+                  <th> Location Source </th>
+                  <th> Magnitude Source </th>
+            </thead>
+
+            <tbody>
+              {% for value in table %}
+            <tr>
+                  <td> {{ value['gmttime'] }} </td>
+                  <td> {{ value['latitude'] }} </td>
+                  <td> {{ value['longitude'] }} </td>
+                  <td> {{ value['depth'] }} </td>
+                  <td> {{ value['mag'] }} </td>
+                  <td> {{ value['magType'] }} </td>
+                  <td> {{ value['nst'] }} </td>
+                  <td> {{ value['gap'] }} </td>
+                  <td> {{ value['dmin'] }} </td>
+                  <td> {{ value['rms'] }} </td>
+                  <td> {{ value['net'] }} </td>
+                  <td> {{ value['id'] }} </td>
+                  <td> {{ value['updated'] }} </td>
+                  <td> {{ value['place'] }} </td>
+                  <td> {{ value['type'] }} </td>
+                  <td> {{ value['horizontalError'] }} </td>
+                  <td> {{ value['depthError'] }} </td>
+                  <td> {{ value['magError'] }} </td>
+                  <td> {{ value['magNst'] }} </td>
+                  <td> {{ value['status'] }} </td>
+                  <td> {{ value['locationSource'] }} </td>
+                  <td> {{ value['magSource'] }} </td>
+            </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      {#{% else %}#}
+          {#<div>No data available</div>#}
+      {#{% endif %}#}
+        </center>
+
+      <br>
+      <br>
+
+
+    </div>
+
+  </body>
+</html>
